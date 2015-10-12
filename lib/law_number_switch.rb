@@ -125,8 +125,8 @@ module LawNumberSwitch
     string = self.gsub(/(?:○|〇)/, "零").gsub(/(?:零|○|〇)(?:十|拾)/, "一十")
       .gsub(/廿/, "二十").gsub(/卅/, "三十") 
     CN_DECS.each do |dec|
-      no_ten = dec + '十'
-      one_ten = dec + '一' + '十'
+      no_ten = dec + "(?:十|拾)"
+      one_ten = dec + "一十"
       string = string.gsub(Regexp.new(no_ten), one_ten)
       non_unit += 1 if string !~ Regexp.new(dec)
     end
@@ -144,7 +144,7 @@ module LawNumberSwitch
     self.scan(/./) do |char|
       num_str += char if char != '零'
     end
-    if num_str =~ /^十/
+    if num_str =~ /^(?:十|拾)/
       num_str = '一' + num_str
     end
 

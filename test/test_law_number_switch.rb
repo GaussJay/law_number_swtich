@@ -11,6 +11,8 @@ class LawNumberSwitchTest < Minitest::Test
       "兩萬五千二百五十貳".to_number
     assert_equal "25252",
       "二五兩伍貳".to_number
+    assert_equal '1012',
+      '一千十二'.to_number
   end
 
   def test_cn_number_to_dash_number
