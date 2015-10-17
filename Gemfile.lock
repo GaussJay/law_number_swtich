@@ -1,0 +1,17 @@
+PATH
+  remote: .
+  specs:
+    law_number_switch (0.1.2)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  law_number_switch!
+
+BUNDLED WITH
+   1.10.6
