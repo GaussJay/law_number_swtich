@@ -1,4 +1,6 @@
 require 'minitest/autorun'
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
 require 'law_number_switch'
 
 class LawNumberSwitchTest < Minitest::Test
